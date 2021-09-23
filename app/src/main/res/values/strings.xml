@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Fox</string>
+
+    <!-- Strings used for loginFragment -->
+    <string name="login_label">Login to Fox!</string>
+    <string name="email">Email<font color="#FF0000">*</font></string>
+    <string name="pass">Password<font color="#FF0000">*</font></string>
+    <string name="login">Login</string>
+
+    <!-- Strings used for homeFragment -->
+    <string name="home_label">Dashboard</string>
+    <string name="next">Next</string>
+    <string name="hello">Hello Fox!</string>
+
+    <!-- Strings used for detailFragment -->
+    <string name="detail_label">Details</string>
+    <string name="previous">Previous</string>
+    <string name="welcome">Welcome to Arctic!</string>
+</resources>
