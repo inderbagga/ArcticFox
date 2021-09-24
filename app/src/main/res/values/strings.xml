@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Fox</string>
 
+    <!-- Strings used for foxActivity -->
+    <string name="logout">Logout</string>
+
     <!-- Strings used for loginFragment -->
     <string name="login_label">Login to Fox!</string>
     <string name="email">Email<font color="#FF0000">*</font></string>

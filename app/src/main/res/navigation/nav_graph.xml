@@ -3,37 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/LoginFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/LoginFragment"
+        android:id="@+id/loginFragment"
         android:name="com.inderbagga.fox.ui.login.LoginFragment"
         android:label="@string/login_label"
-        tools:layout="@layout/fragment_login">
-
-        <action
-            android:id="@+id/loginToHome"
-            app:destination="@id/HomeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_login"/>
 
     <fragment
-        android:id="@+id/HomeFragment"
+        android:id="@+id/homeFragment"
         android:name="com.inderbagga.fox.ui.home.HomeFragment"
         android:label="@string/home_label"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_home"/>
 
-        <action
-            android:id="@+id/homeToDetail"
-            app:destination="@id/DetailFragment" />
-    </fragment>
     <fragment
-        android:id="@+id/DetailFragment"
+        android:id="@+id/detailFragment"
         android:name="com.inderbagga.fox.ui.detail.DetailFragment"
         android:label="@string/detail_label"
-        tools:layout="@layout/fragment_detail">
-
-        <action
-            android:id="@+id/detailToHome"
-            app:destination="@id/HomeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_detail"/>
 </navigation>

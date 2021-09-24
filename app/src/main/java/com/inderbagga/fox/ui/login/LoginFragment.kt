@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import com.inderbagga.fox.FoxActivity
 import com.inderbagga.fox.R
 import com.inderbagga.fox.databinding.FragmentLoginBinding
 
@@ -15,6 +15,7 @@ import com.inderbagga.fox.databinding.FragmentLoginBinding
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
+    private lateinit var foxActivity: FoxActivity
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,7 +25,6 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -32,8 +32,10 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        foxActivity=activity as FoxActivity
+
         binding.btnLogin.setOnClickListener {
-            findNavController().navigate(R.id.loginToHome)
+            foxActivity.onFragmentChange(R.id.homeFragment)
         }
     }
 

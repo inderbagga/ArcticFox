@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import com.inderbagga.fox.FoxActivity
 import com.inderbagga.fox.R
 import com.inderbagga.fox.databinding.FragmentHomeBinding
 
@@ -15,7 +15,7 @@ import com.inderbagga.fox.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-
+    private lateinit var foxActivity:FoxActivity
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -32,8 +32,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        foxActivity= activity as FoxActivity
+
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.homeToDetail)
+            foxActivity.onFragmentChange(R.id.detailFragment)
         }
     }
 
