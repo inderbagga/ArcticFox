@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fox</string>
+    <string name="app_name">Arctic Fox</string>
 
     <!-- Strings used for foxActivity -->
     <string name="logout">Logout</string>
@@ -8,7 +8,12 @@
     <string name="login_label">Login to Fox!</string>
     <string name="email">Email<font color="#FF0000">*</font></string>
     <string name="pass">Password<font color="#FF0000">*</font></string>
+    <string name="error_email">"Invalid email"</string>
+    <string name="error_password">"Invalid password (minimum 8 chars)"</string>
     <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="create">Create an account</string>
+    <string name="version">Version %1$s</string>
 
     <!-- Strings used for homeFragment -->
     <string name="home_label">Dashboard</string>

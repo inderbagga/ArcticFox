@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.inderbagga.fox.ui.login.LoginFragment"
+        android:name="com.inderbagga.fox.ui.main.login.LoginFragment"
         android:label="@string/login_label"
         tools:layout="@layout/fragment_login"/>
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.inderbagga.fox.ui.home.HomeFragment"
+        android:name="com.inderbagga.fox.ui.main.home.HomeFragment"
         android:label="@string/home_label"
         tools:layout="@layout/fragment_home"/>
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.inderbagga.fox.ui.detail.DetailFragment"
+        android:name="com.inderbagga.fox.ui.main.detail.DetailFragment"
         android:label="@string/detail_label"
         tools:layout="@layout/fragment_detail"/>
 </navigation>

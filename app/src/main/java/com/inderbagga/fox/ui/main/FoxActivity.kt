@@ -1,4 +1,4 @@
-package com.inderbagga.fox
+package com.inderbagga.fox.ui.main
 
 import android.os.Bundle
 import android.view.Gravity
@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.snackbar.Snackbar
+import com.inderbagga.fox.R
 import com.inderbagga.fox.databinding.ActivityFoxBinding
 
 class FoxActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class FoxActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityFoxBinding
     private var foxMenu: Menu? = null
-    private  var activeFragmentId = 0
+    private var activeFragmentId = R.id.loginFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +36,7 @@ class FoxActivity : AppCompatActivity() {
 
         //Marking Top-Level destinations of a Navigation Graph
         appBarConfiguration = AppBarConfiguration(
-            setOf( R.id.homeFragment, R.id.detailFragment))
+            setOf(R.id.homeFragment, R.id.detailFragment))
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
@@ -49,6 +50,7 @@ class FoxActivity : AppCompatActivity() {
 
         when(activeFragmentId){
 
+            R.id.loginFragment -> finish()
             R.id.homeFragment -> foxMenu?.let { onOptionsItemSelected(it.findItem(R.id.logout)) }
             else -> onFragmentChange(R.id.homeFragment)
         }

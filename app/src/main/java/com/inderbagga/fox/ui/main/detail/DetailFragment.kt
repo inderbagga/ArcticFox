@@ -1,22 +1,21 @@
-package com.inderbagga.fox.ui.login
+package com.inderbagga.fox.ui.main.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.inderbagga.fox.FoxActivity
+import com.inderbagga.fox.ui.main.FoxActivity
 import com.inderbagga.fox.R
-import com.inderbagga.fox.databinding.FragmentLoginBinding
+import com.inderbagga.fox.databinding.FragmentDetailBinding
 
 /**
- * This view will contain the login layout.
+ * This will have detailed information about the item being selected in homeFragment.
  */
-class LoginFragment : Fragment() {
+class DetailFragment : Fragment() {
 
-    private var _binding: FragmentLoginBinding? = null
+    private var _binding: FragmentDetailBinding? = null
     private lateinit var foxActivity: FoxActivity
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -25,7 +24,8 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+
+        _binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,7 +34,7 @@ class LoginFragment : Fragment() {
 
         foxActivity=activity as FoxActivity
 
-        binding.btnLogin.setOnClickListener {
+        binding.btnPrevious.setOnClickListener {
             foxActivity.onFragmentChange(R.id.homeFragment)
         }
     }

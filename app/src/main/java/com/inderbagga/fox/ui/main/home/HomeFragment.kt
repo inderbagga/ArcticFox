@@ -1,11 +1,11 @@
-package com.inderbagga.fox.ui.home
+package com.inderbagga.fox.ui.main.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.inderbagga.fox.FoxActivity
+import com.inderbagga.fox.ui.main.FoxActivity
 import com.inderbagga.fox.R
 import com.inderbagga.fox.databinding.FragmentHomeBinding
 
@@ -15,7 +15,7 @@ import com.inderbagga.fox.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-    private lateinit var foxActivity:FoxActivity
+    private lateinit var foxActivity: FoxActivity
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
